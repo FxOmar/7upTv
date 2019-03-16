@@ -1,12 +1,17 @@
 <template>
-  <v-app dark>
+  <v-app>
     <v-navigation-drawer
       v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
+      mini-variant
+      permanent
       app
+      fixed
     >
+      <div class="logo">
+        <v-icon large>
+          menu
+        </v-icon>
+      </div>
       <v-list>
         <v-list-tile
           v-for="(item, i) in items"
@@ -16,7 +21,9 @@
           exact
         >
           <v-list-tile-action>
-            <v-icon>{{ item.icon }}</v-icon>
+            <v-icon large>
+              {{ item.icon }}
+            </v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title v-text="item.title" />
@@ -25,63 +32,39 @@
       </v-list>
     </v-navigation-drawer>
     <v-toolbar
-      :clipped-left="clipped"
-      fixed
+      permanent
       app
+      fixed
+      color="white"
+      height="64px"
+      flat
+      tile
+      class="navbar"
     >
-      <v-toolbar-side-icon @click="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>{{ `chevron_${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>web</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
-      >
-        <v-icon>remove</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>menu</v-icon>
-      </v-btn>
+      <v-text-field
+        color="#c4c4c6"
+        height="64px"
+        label="Search"
+        prepend-inner-icon="search"
+        class="search"
+        solo
+        flat
+        autofocus
+        single-line
+        hide-details
+        clearable
+      />
     </v-toolbar>
     <v-content>
-      <v-container>
+      <v-container
+        grid-list-md
+        text-xs-center
+      >
         <nuxt />
       </v-container>
     </v-content>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-tile @click.native="right = !right">
-          <v-list-tile-action>
-            <v-icon light>compare_arrows</v-icon>
-          </v-list-tile-action>
-          <v-list-tile-title>Switch drawer (click me)</v-list-tile-title>
-        </v-list-tile>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :fixed="fixed"
-      app
-    >
-      <span>&copy; 2019</span>
+    <v-footer app>
+      <span>All reights reserved &copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
@@ -90,26 +73,46 @@
 export default {
   data() {
     return {
-      clipped: false,
+      fixed: true,
       drawer: false,
-      fixed: false,
       items: [
         {
-          icon: 'apps',
-          title: 'Welcome',
+          icon: 'account_circle',
+          title: 'Account',
+          to: '/account'
+        },
+        {
+          icon: 'home',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'bubble_chart',
-          title: 'Inspire',
+          icon: 'movie',
+          title: 'Movies',
           to: '/inspire'
+        },
+        {
+          icon: 'local_movies',
+          title: 'Series',
+          to: '/series'
         }
       ],
       miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
+      title: '7UPTV'
     }
   }
 }
 </script>
+
+<style scoped>
+.logo {
+  width: 100%;
+  height: 64px;
+  background-color: #4b77f4;
+  text-align: center;
+  padding: 12px;
+}
+.logo .v-icon {
+  color: white;
+}
+</style>
