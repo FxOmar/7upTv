@@ -1,8 +1,8 @@
 {
-  "name": "forja",
+  "name": "7UPTV",
   "version": "1.0.0",
   "description": "Watch online Movies and TV shows.",
-  "author": "Abdellah Chadidi",
+  "author": "7UPTV Team",
   "private": true,
   "scripts": {
     "dev": "nuxt",
