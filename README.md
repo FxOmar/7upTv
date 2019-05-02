@@ -1,4 +1,4 @@
-# QamarTV
+# 7UP.TV
 
 > Watch online Movies and TV shows.
 
