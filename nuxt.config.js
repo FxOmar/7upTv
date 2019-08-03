@@ -53,6 +53,14 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
+  /*
+	 ** nuxt.js server options
+	 ** (can be overrided by environment variables)
+	 */
+  server: {
+    port: process.env.APP_PORT,
+    host: '0.0.0.0'
+  },
 
   /*
   ** Build configuration
