@@ -1,22 +1,17 @@
 <template>
-  <v-container
-    grid-list-md
-    text-xs-center
+  <v-layout
+    row
+    wrap
   >
-    <v-layout
-      row
-      wrap
-    >
-      <Block
-        :data="movies"
-        title="New Movies"
-      />
-      <Block
-        :data="movies"
-        title="New Series"
-      />
-    </v-layout>
-  </v-container>
+    <Block
+      :data="movies"
+      title="New Movies"
+    />
+    <Block
+      :data="movies"
+      title="New Series"
+    />
+  </v-layout>
 </template>
 
 <script>
@@ -38,31 +33,31 @@ export default {
           thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
           title: 'Top 10 Australian beaches',
           views: 5000,
-          time: '4 hours ago'
+          time: '1 hours ago'
         },
         {
           thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
           title: 'Top 10 Australian beaches',
           views: 5000,
-          time: '4 hours ago'
+          time: '2 hours ago'
         },
         {
           thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
           title: 'Top 10 Australian beaches',
           views: 5000,
-          time: '4 hours ago'
+          time: '7 hours ago'
         },
         {
           thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
           title: 'Top 10 Australian beaches',
           views: 5000,
-          time: '4 hours ago'
+          time: '54 hours ago'
         },
         {
           thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
           title: 'Top 10 Australian beaches',
           views: 5000,
-          time: '4 hours ago'
+          time: '4 days ago'
         },
         {
           thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
