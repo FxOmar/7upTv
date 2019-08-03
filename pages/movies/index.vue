@@ -3,22 +3,38 @@
     row
     wrap
   >
-    <Block
-      :data="movies"
-      title="New Movies"
-    />
-    <Block
-      :data="movies"
-      title="New Series"
-    />
+    <div class="block">
+      <div class="block-head">
+        <h1 class="text-xs-left ml-4">
+          All Movies
+        </h1>
+      </div>
+      <div class="block-content">
+        <v-container>
+          <v-layout
+            row
+            wrap
+          >
+            <Movie
+              v-for="(card, index) in movies"
+              :key="index"
+              :thumbnail="card.thumbnail"
+              :title="card.title"
+              :views="card.views"
+              :time="card.time"
+            />
+          </v-layout>
+        </v-container>
+      </div>
+    </div>
   </v-layout>
 </template>
 
 <script>
-import Block from '@/components/Block'
+import Movie from '@/components/Movie'
 export default {
   components: {
-    Block
+    Movie
   },
   data() {
     return {

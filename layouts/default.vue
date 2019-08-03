@@ -55,14 +55,13 @@
         clearable
       />
     </v-toolbar>
-    <v-content>
-      <v-container
-        grid-list-md
-        text-xs-center
-      >
-        <nuxt />
-      </v-container>
-    </v-content>
+    <main>
+      <v-content>
+        <v-container fluid>
+          <nuxt />
+        </v-container>
+      </v-content>
+    </main>
     <v-footer app>
       <span>All reights reserved &copy; 2019</span>
     </v-footer>
@@ -89,7 +88,7 @@ export default {
         {
           icon: 'movie',
           title: 'Movies',
-          to: '/inspire'
+          to: '/movies'
         },
         {
           icon: 'local_movies',
