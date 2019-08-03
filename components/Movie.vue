@@ -1,11 +1,11 @@
 <template>
   <v-flex
     xs12
-    sm4
-    md3
-    lg2
+    sm6
+    md4
+    lg3
   >
-    <v-card>
+    <v-card class="text-xs-center ma-2">
       <v-img
         class="white--text"
         height="200px"
@@ -30,6 +30,22 @@
           <span class="grey--text">{{ views }} Views . {{ time }}</span>
         </div>
       </v-card-title>
+
+      <v-card-actions>
+        <v-btn
+          flat
+          color="grey"
+          :to="'/movies/'+title"
+        >
+          <v-icon
+            small
+            left
+          >
+            play_arrow
+          </v-icon>
+          <span>Watch</span>
+        </v-btn>
+      </v-card-actions>
     </v-card>
   </v-flex>
 </template>
