@@ -1,0 +1,16 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+.popup-menu {
+    li:not(.divider) {
+        @apply px-4 py-1 text-sm select-none;
+        cursor: pointer;
+        &:hover {
+            @apply bg-gray-100;
+        }
+    }
+    li.divider {
+        @apply border-b border-gray-200 my-1;
+    }
+}
