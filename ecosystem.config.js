@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: "7uptv-staging",
-      script: "yarn",
+      script: "npm",
       args: "run dev",
       watch: true,
       watch: ["server", "client"],
@@ -16,7 +16,7 @@ module.exports = {
     },
     {
       name: "7uptv-production",
-      script: "yarn",
+      script: "npm",
       args: "run start"
     }
   ]
