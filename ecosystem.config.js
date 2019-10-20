@@ -4,8 +4,8 @@ module.exports = {
       name: "7uptv-staging",
       script: "npm",
       args: "run dev",
-      watch: true,
-      watch: ["server", "client"],
+      // watch: true,
+      // watch: ["server", "client"],
       // Delay between restart
       // watch_delay: 1000,
       ignore_watch: ["node_modules", "Tests"],
