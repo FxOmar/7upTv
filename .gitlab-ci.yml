@@ -1,21 +1,20 @@
-image: node:latest
+image: registry.gitlab.com/7up-tv/backend:latest
 
 stages:
-  - build
-  - test
+  - deploy
 
-cache:
-  paths:
-    - node_modules/
-
-install_dependencies:
-  stage: build
+staging:
+  stage: deploy
   script:
-    - npm install
-  artifacts:
-    paths:
-      - node_modules/
-
-test_with_lab:
-  stage: test
-  script: npm test
+    - "which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )"
+    - eval $(ssh-agent -s)
+    - ssh-add <(echo "$SSH_PRIVATE_KEY")
+    - mkdir -p ~/.ssh
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config'
+    # Run Envoy
+    - ~/.composer/vendor/bin/envoy run deploy_staging
+  environment:
+    name: staging
+    url: https://7up.tv
+  only:
+    - master

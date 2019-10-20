@@ -1,72 +1,30 @@
 <template>
-  <v-layout
-    row
-    wrap
-  >
-    <Block
-      :data="movies"
-      title="New Movies"
-    />
-    <Block
-      :data="movies"
-      title="New Series"
-    />
-  </v-layout>
+  <div class="container mx-auto px-3 py-5">
+    <div class="flex -mx-3">
+      <div class="px-3 w-1/4">
+        <movieCard />
+      </div>
+      <div class="px-3 w-1/4">
+        <movieCard />
+      </div>
+      <div class="px-3 w-1/4">
+        <movieCard />
+      </div>
+      <div class="px-3 w-1/4">
+        <movieCard />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
-import Block from '@/components/Block'
+import movieCard from '~/components/common/movieCard'
 export default {
   components: {
-    Block
-  },
-  data() {
-    return {
-      movies: [
-        {
-          thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-          title: 'Top 10 Australian beaches',
-          views: 5000,
-          time: '4 hours ago'
-        },
-        {
-          thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-          title: 'Top 10 Australian beaches',
-          views: 5000,
-          time: '1 hours ago'
-        },
-        {
-          thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-          title: 'Top 10 Australian beaches',
-          views: 5000,
-          time: '2 hours ago'
-        },
-        {
-          thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-          title: 'Top 10 Australian beaches',
-          views: 5000,
-          time: '7 hours ago'
-        },
-        {
-          thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-          title: 'Top 10 Australian beaches',
-          views: 5000,
-          time: '54 hours ago'
-        },
-        {
-          thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-          title: 'Top 10 Australian beaches',
-          views: 5000,
-          time: '4 days ago'
-        },
-        {
-          thumbnail: 'https://cdn.vuetifyjs.com/images/cards/docks.jpg',
-          title: 'Top 10 Australian beaches',
-          views: 5000,
-          time: '4 hours ago'
-        }
-      ]
-    }
+    movieCard
   }
 }
 </script>
+
+<style>
+</style>
