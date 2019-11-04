@@ -5,7 +5,9 @@
       src="https://tailwindcss.com/img/card-top.jpg"
     >
     <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">test this out</div>
+       <nuxt-link class="block" to="movies/test">
+          <div class="font-bold text-xl mb-2">test this out</div>
+      </nuxt-link>
       <p class="text-gray-700 text-base">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit.
       </p>
