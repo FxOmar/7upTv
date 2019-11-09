@@ -5,7 +5,7 @@
       src="https://tailwindcss.com/img/card-top.jpg"
     >
     <div class="px-6 py-4">
-       <nuxt-link class="block" to="movies/test">
+       <nuxt-link class="block" to="movie/test">
           <div class="font-bold text-xl mb-2">test this out</div>
       </nuxt-link>
       <p class="text-gray-700 text-base">
@@ -21,8 +21,15 @@
 </template>
 
 <script>
-export default {
+import axios from '@nuxtjs/axios'
 
+export default {
+  data(){
+
+  },
+  created(){
+
+  }
 }
 </script>
 

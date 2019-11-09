@@ -22,9 +22,16 @@ export default {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      },
+      { 
+        rel:"stylesheet", 
+        href:"https://unpkg.com/swiper/css/swiper.min.css" 
       }
     ],
-    script: [{ src: "https://kit.fontawesome.com/89d14b18c9.js" }]
+    script: [
+      { src: "https://kit.fontawesome.com/89d14b18c9.js" },
+      { src: "https://unpkg.com/swiper/js/swiper.min.js" }
+    ]
   },
   /*
    ** Customize the progress-bar color
