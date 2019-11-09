@@ -1,23 +1,24 @@
 <template>
-  <div class="max-w-sm rounded overflow-hidden shadow-lg">
-    <img
-      class="w-full"
-      src="https://tailwindcss.com/img/card-top.jpg"
-    >
-    <div class="px-6 py-4">
-       <nuxt-link class="block" to="movie/test">
-          <div class="font-bold text-xl mb-2">test this out</div>
-      </nuxt-link>
-      <p class="text-gray-700 text-base">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      </p>
-    </div>
-    <div class="px-6 py-4">
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#action</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#sci-fi</span>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">#adventure</span>
-    </div>
-  </div>
+  <article id="475557" class="item">
+      <div class="thumb mb-4">
+          <a href="#" rel="bookmark" title="Joker (2019)">
+              <div class=" relative">
+                  <img class="rounded" src="//i0.wp.com/image.tmdb.org/t/p/w300/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg?resize=300,450" alt="Image Joker" title="Image Joker (2019)">
+                  <div class="flex absolute inset-0 items-center justify-center">
+                      <button class="rounded-full h-16 w-16 flex items-center justify-center bg-red-500" type="button"><i class="fas fa-play"></i></button>
+                  </div>
+                  <div class="rate absolute inset-0">
+                    <i class="fa fa-star text-warning"></i> <span class="small text-white">8.5/10</span>
+                  </div>
+              </div>
+          </a>
+          <header class="entry-header">
+              <h2 class="entry-title">
+                  <a href="#" class="_title" rel="bookmark" title="Joker (2019)">Joker (2019)</a>
+              </h2>
+          </header>
+      </div>
+  </article>
 </template>
 
 <script>

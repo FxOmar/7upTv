@@ -6,16 +6,16 @@
             </div>
         </div>
         <!-- Slider main container -->
-        <div class="swiper-container h-32 relative">
+        <div class="swiper-container relative">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide"><movieCard /></div>
+                <div class="swiper-slide"><movieCard /></div>
+                <div class="swiper-slide"><movieCard /></div>
+                <div class="swiper-slide"><movieCard /></div>
+                <div class="swiper-slide"><movieCard /></div>
+                <div class="swiper-slide"><movieCard /></div>
             </div>
         </div>
         <div class="object-none object-right-top">
@@ -28,8 +28,12 @@
 
 <script>
 import axios from '@nuxtjs/axios'
+import movieCard from './movieCard'
 
 export default {
+  components:{
+      movieCard,
+  },
   data(){
 
   },
@@ -70,9 +74,12 @@ export default {
 
 <style scoped>
 .swiper-container {
-    @apply w-auto h-64
+    @apply w-auto 
+}
+.swiper-wrapper {
+    @apply flex items-stretch justify-start mb-10 px-4 relative
 }
 .swiper-slide {
-    @apply flex h-full bg-gray-700
+    
 }
 </style>

@@ -1,30 +1,36 @@
 <template>
-  <div class="container mx-auto px-3 py-5">
-    <slider />
-    <!-- <div class="flex -mx-3">
-      <div class="px-3 w-1/4">
-        <movieCard />
-      </div>
-      <div class="px-3 w-1/4">
-        <movieCard />
-      </div>
-      <div class="px-3 w-1/4">
-        <movieCard />
-      </div>
-      <div class="px-3 w-1/4">
-        <movieCard />
-      </div>
-    </div> -->
+  <div>
+    <div>
+      <jumbotron />
+    </div>
+    <div class="container mx-auto px-3 py-5">
+      <slider />
+      <!-- <div class="flex -mx-3">
+        <div class="px-3 w-1/4">
+          <movieCard />
+        </div>
+        <div class="px-3 w-1/4">
+          <movieCard />
+        </div>
+        <div class="px-3 w-1/4">
+          <movieCard />
+        </div>
+        <div class="px-3 w-1/4">
+          <movieCard />
+        </div>
+      </div> -->
+    </div>
   </div>
 </template>
 
 <script>
+import jumbotron from '~/components/common/jumbotron'
 import movieCard from '~/components/common/movieCard'
 import slider from '~/components/common/slider'
 
 export default {
-  layout: 'homepage',
   components: {
+    jumbotron,
     movieCard,
     slider
   },
