@@ -4,7 +4,12 @@
       <jumbotron />
     </div>
     <div class="container mx-auto px-3 py-5">
-      <slider />
+      <div class="mt-10 border-b">
+        <slider title="Popular Movies" />
+      </div>
+      <div class="mt-10 border-b">
+        <slider title="Now Playing Movies" />
+      </div>
       <!-- <div class="flex -mx-3">
         <div class="px-3 w-1/4">
           <movieCard />

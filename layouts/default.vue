@@ -7,15 +7,18 @@
     <div class="bg-gray-100">
       <nuxt />
     </div>
+    <appFooter />
   </div>
 </template>
 
 <script>
 import appNavbar from '~/components/common/appNavbar'
+import appFooter from '~/components/common/appFooter'
 
 export default {
   components: {
-    appNavbar
+    appNavbar,
+    appFooter
   },
   computed: {
     dir () {
