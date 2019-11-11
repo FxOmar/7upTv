@@ -15,12 +15,11 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><movieCard /></div>
-                    <div class="swiper-slide"><movieCard /></div>
-                    <div class="swiper-slide"><movieCard /></div>
-                    <div class="swiper-slide"><movieCard /></div>
-                    <div class="swiper-slide"><movieCard /></div>
-                    <div class="swiper-slide"><movieCard /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
                 </div>
             </div>
         </div>
@@ -85,8 +84,5 @@ export default {
 }
 .swiper-button-disabled{
     @apply text-gray-500
-}
-.swiper-slide {
-    
 }
 </style>

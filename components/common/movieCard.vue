@@ -14,7 +14,7 @@
           </a>
           <header class="entry-header">
               <h2 class="entry-title">
-                  <a href="#" class="_title" rel="bookmark" title="Joker (2019)">Joker (2019)</a>
+                  <a href="#" class="_title" rel="bookmark" title="Joker (2019)">{{ title }}</a>
               </h2>
           </header>
       </div>
@@ -28,9 +28,11 @@ export default {
   data(){
 
   },
-  created(){
-
-  }
+  props:{
+    id: Number,
+    title: String,
+    imd: Number,
+  },
 }
 </script>
 
