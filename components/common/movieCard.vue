@@ -22,22 +22,16 @@
 </template>
 
 <script>
-import axios from '@nuxtjs/axios'
-
 export default {
-  data(){
-
-  },
-  props:{
-    id: Number,
-    title: String,
-    imd: Number,
-  },
+  props:['title']
 }
 </script>
 
 <style>
   .bg-hover{
     background-color: rgba(0,0,0,.8);
+  }
+  .entry-title{
+    @apply pt-3 
   }
 </style>

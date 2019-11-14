@@ -4,7 +4,9 @@
     class="text-gray-700"
   >
     <appNavbar />
-    <nuxt />
+    <div>
+      <nuxt />
+    </div>
     <appFooter />
   </div>
 </template>

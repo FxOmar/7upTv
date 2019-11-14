@@ -20,6 +20,9 @@
                     <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
                     <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
                     <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
                 </div>
             </div>
         </div>
@@ -27,7 +30,6 @@
 </template>
 
 <script>
-import axios from '@nuxtjs/axios'
 import movieCard from './movieCard'
 
 export default {
@@ -35,11 +37,6 @@ export default {
       movieCard,
   },
   props:['title'],
-  data(){
-      return {
-          instance: null
-      }
-  },
   mounted() {
     this.init()
   },
@@ -49,7 +46,6 @@ export default {
             
             slidesPerView: 1,
             spaceBetween: 10,
-            watchOverflow: true,
             // Navigation arrows
             navigation: {
                 nextEl: '.swiper-next',
