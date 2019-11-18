@@ -13,10 +13,6 @@ Vue.prototype.$catchValidationErrors = function (error) {
     }
 }
 
-Vue.prototype.$auth = function () {
-    return this.$store.state.Auth.user
-}
-
 Vue.prototype.$avatar = function () {
     return '/img/avatar.png'
 }

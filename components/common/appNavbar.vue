@@ -2,7 +2,7 @@
   <div :style="{ marginBottom: $store.state.navHeight + 'px' }">
     <div
       ref="navbar"
-      class="h-20 shadow-md bg-white fixed inset-x-0 top-0 z-50"
+      class="h-20 shadow-md bg-white"
     >
       <div class="container mx-auto h-full">
         <nav class="flex justify-between h-full">
@@ -13,9 +13,9 @@
           </div>
           <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="lg:flex-grow">
-              <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-white mr-4">
-                Docs
-              </a>
+              <nuxt-link to="/movies" class="block lg:inline-block lg:mt-0 hover:text-white mr-4">
+                Movies
+              </nuxt-link>
               <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-white mr-4">
                 Examples
               </a>
@@ -54,7 +54,7 @@
                 </div>
               </popper>
               <div class="flex items-center">
-                <template v-if="$auth()">
+                <template v-if="isAuthenticated">
                   <div class="px-3 flex items-center text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                     <i class="fa fa-bell"></i>
                   </div>
@@ -63,18 +63,18 @@
                   </div>
                   <div class="border-l border-gray-200 my-3"></div>
                 </template>
-                <template v-if="$auth()">
+                <template v-if="isAuthenticated">
                   <div class="px-3 flex items-center hover:bg-gray-100 text-gray-500 hover:text-gray-700 cursor-pointer">
                     <center-img
                       class="h-8 w-8 rounded-full"
                       innerBorder
                     >
-                      <img :src="($auth() || {}).avatar || $avatar()">
+                      <img :src="(isAuthenticated || {}).avatar || $avatar()">
                     </center-img>
                     <i class="fa fa-caret-down rtl:mr-2 ltr:ml-2"></i>
                   </div>
                 </template>
-                <template v-if="$auth()">
+                <template v-if="isAuthenticated">
                   <popper>
                     <div
                       slot-scope="{ hide }"
@@ -84,8 +84,7 @@
                         class="popup-menu"
                         @click="hide"
                       >
-                        <nuxt-link :to="localePath('profile-index')">
-                          :locale:
+                        <nuxt-link to="/user/profile">
                           <li>{{ $t('profile') }}</li>
                         </nuxt-link>
                         <li class="divider"></li>
@@ -115,20 +114,15 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
+
 export default {
-  mounted () {
-    this.$store.commit('SET_NAV_HEIGHT', this.$refs.navbar.clientHeight)
+  computed: {
+    ...mapGetters(['isAuthenticated', 'loggedInUser'])
   },
   methods: {
-    async logout () {
-      try {
-        await this.$axios.$post('/users/logout')
-        this.$cookies.remove('access_token')
-        this.$cookies.remove('user')
-        location = this.localePath('index')
-      } catch (error) {
-        console.dir(error)
-      }
+    async logout() {
+      await this.$auth.logout();
     }
   }
 }

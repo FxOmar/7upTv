@@ -65,6 +65,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
+    '@nuxtjs/auth',
     "nuxt-i18n",
     "cookie-universal-nuxt",
     "@nuxtjs/sentry"
@@ -75,6 +76,28 @@ export default {
    */
   axios: {
     baseURL: process.env.API_URL
+  },
+  auth: {
+  	strategies: {
+  		local: {
+  			endpoints: {
+  				login: {
+  					url: '/users/login',
+  					method: 'POST',
+  					propertyName: 'access_token',
+  				},
+  				logout: {
+  					url: '/users/logout',
+  					method: 'POST'
+  				},
+  				user: {
+  					url: '/me',
+  					method: 'get',
+  					propertyName: false
+  				}
+  			}
+  		}
+  	}
   },
   /*
    ** nuxt.js server options
