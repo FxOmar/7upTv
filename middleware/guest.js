@@ -1,4 +1,4 @@
 export default ({ store, redirect }) => {
-    if (!!store.state.Auth.user)
+    if (!!store.state.auth.user)
         redirect('/')
 }

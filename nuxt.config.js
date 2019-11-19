@@ -92,8 +92,8 @@ export default {
   				},
   				user: {
   					url: '/me',
-  					method: 'get',
-  					propertyName: false
+  					method: 'GET',
+  					propertyName: 'result'
   				}
   			}
   		}
