@@ -15,14 +15,7 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
-                    <div class="swiper-slide"><movieCard title="Joker (2019)" /></div>
+                    <div class="swiper-slide" v-for="n in 9" :key="n"><movieCard title="Joker (2019)" /></div>
                 </div>
             </div>
         </div>
