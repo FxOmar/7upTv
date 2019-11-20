@@ -69,7 +69,7 @@ export default {
     @apply w-auto 
 }
 .swiper-wrapper {
-    @apply flex items-stretch justify-start mb-10 px-4 relative
+    @apply flex items-stretch justify-start mb-10 px-1 relative
 }
 .swiper-button-disabled{
     @apply text-gray-500

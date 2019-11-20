@@ -3,11 +3,11 @@
     <div>
       <jumbotron />
     </div>
-    <div class="container mx-auto px-3 py-5">
+    <div class="container mx-auto px-2 py-5">
       <div class="mt-10 border-b">
         <slider title="Popular Movies" />
       </div>
-      <div class="mt-10 border-b">
+      <div class="mt-10">
         <slider title="Now Playing Movies" />
       </div>
       <!-- <div class="flex -mx-3">
