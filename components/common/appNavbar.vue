@@ -2,7 +2,7 @@
   <div :style="{ marginBottom: $store.state.navHeight + 'px' }">
     <div
       ref="navbar"
-      class="h-20 shadow-md bg-white"
+      class="shadow-md bg-white py-2"
     >
       <div class="container mx-auto h-full">
         <nav class="flex justify-between h-full">
@@ -26,7 +26,7 @@
             <div class="flex">
               <div class="flex items-center">
                 <form class="w-full max-w-sm">
-                  <div class="flex items-center border rounded-sm py-2">
+                  <div class="flex items-center border rounded py-2">
                     <input
                       class="appearance-none bg-transparent border-none w-full text-gray-700 ml-3 py-1 px-2 leading-tight focus:outline-none"
                       type="text" placeholder="search...">

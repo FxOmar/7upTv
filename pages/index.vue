@@ -3,12 +3,12 @@
     <div>
       <jumbotron />
     </div>
-    <div class="container mx-auto px-2 py-5">
+    <div class="container mx-auto px-12 py-5">
       <div class="mt-10 border-b">
-        <slider title="Popular Movies" />
+        <popularMSlider />
       </div>
       <div class="mt-10">
-        <slider title="Now Playing Movies" />
+        <!-- <slider title="Now Playing Movies" /> -->
       </div>
     </div>
   </div>
@@ -16,14 +16,13 @@
 
 <script>
 import jumbotron from '~/components/common/jumbotron'
-import movieCard from '~/components/common/movieCard'
-import slider from '~/components/common/slider'
+import popularMSlider from '~/components/popularMSlider'
+
 
 export default {
   components: {
     jumbotron,
-    movieCard,
-    slider
+    popularMSlider
   },
   data () {
     return { project: 'default' }

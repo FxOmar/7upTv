@@ -15,7 +15,7 @@
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide" v-for="n in 9" :key="n"><movieCard title="Joker (2019)" /></div>
+                    <slot />
                 </div>
             </div>
         </div>
@@ -47,15 +47,15 @@ export default {
             breakpoints: {
                 640: {
                     slidesPerView: 2,
-                    spaceBetween: 20,
+                    spaceBetween: 2,
                 },
                 768: {
                     slidesPerView: 4,
-                    spaceBetween: 40,
+                    spaceBetween: 110,
                 },
                 1024: {
                     slidesPerView: 5,
-                    spaceBetween: 50,
+                    spaceBetween: 3,
                 },
             }
         })
@@ -69,7 +69,7 @@ export default {
     @apply w-auto 
 }
 .swiper-wrapper {
-    @apply flex items-stretch justify-start mb-10 px-1 relative
+    @apply mb-10 relative
 }
 .swiper-button-disabled{
     @apply text-gray-500
