@@ -13,13 +13,13 @@
           </div>
           <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="lg:flex-grow">
-              <nuxt-link to="/movies" class="block lg:inline-block lg:mt-0 hover:text-white mr-4">
+              <nuxt-link to="/movies" class="block lg:inline-block lg:mt-0 hover:text-blue-400 mr-4">
                 Movies
               </nuxt-link>
-              <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-white mr-4">
+              <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-blue-400 mr-4">
                 Examples
               </a>
-              <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-white">
+              <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-blue-400">
                 Blog
               </a>
             </div>
