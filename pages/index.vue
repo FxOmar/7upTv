@@ -10,20 +10,6 @@
       <div class="mt-10">
         <slider title="Now Playing Movies" />
       </div>
-      <!-- <div class="flex -mx-3">
-        <div class="px-3 w-1/4">
-          <movieCard />
-        </div>
-        <div class="px-3 w-1/4">
-          <movieCard />
-        </div>
-        <div class="px-3 w-1/4">
-          <movieCard />
-        </div>
-        <div class="px-3 w-1/4">
-          <movieCard />
-        </div>
-      </div> -->
     </div>
   </div>
 </template>

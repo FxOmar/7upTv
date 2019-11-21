@@ -58,9 +58,28 @@
                   <div class="px-3 flex items-center text-gray-500 hover:bg-gray-100 hover:text-gray-700">
                     <i class="fa fa-bell"></i>
                   </div>
-                  <div class="px-3 flex items-center text-gray-500 hover:bg-gray-100 hover:text-gray-700">
-                    <i class="fa fa-comment-alt"></i>
+                  <div class="px-3 flex items-center text-gray-500 hover:bg-gray-100 hover:text-gray-700 select-none cursor-pointer">
+                    <i class="fas fa-plus"></i>
                   </div>
+                  <popper>
+                    <div
+                      slot-scope="{ hide }"
+                      class="shadow-md rounded bg-white py-2 w-32 mt-2"
+                    >
+                      <ul
+                        class="popup-menu"
+                        @click="hide"
+                      >
+                        <nuxt-link to="/create/movie">
+                          <li>{{ $t('Movie') }}</li>
+                        </nuxt-link>
+                        <li class="divider"></li>
+                        <nuxt-link to="/create/series">
+                          <li>{{ $t('Series') }}</li>
+                        </nuxt-link>
+                      </ul>
+                    </div>
+                  </popper>
                   <div class="border-l border-gray-200 my-3"></div>
                 </template>
                 <template v-if="isAuthenticated">
