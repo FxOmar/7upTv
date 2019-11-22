@@ -1,20 +1,20 @@
 <template>
-    <slider title="Popular Movies">
-        <div class="swiper-slide">
-            <movieCard v-for="(movie, index) in movies" :key="index" class="w-48 pl-1" :title="movie.title" :img="movie.poster_path" :vote_average="movie.vote_average" />
-        </div>
-    </slider>
+    <swiper title="Popular Movies" link="/movies/movie-popular">
+        <swiper-slide v-for="(movie, index) in movies" :key="index">
+            <movieCard  class="pl-1" :title="movie.title" :img="movie.poster_path" :vote_average="movie.vote_average" />
+        </swiper-slide>
+    </swiper>
 </template>
 
 <script>
 import movieCard from '~/components/common/movieCard'
-import slider from '~/components/common/slider'
+import swiper from '~/components/common/swiper'
 import axios from "axios"
 
 export default {
     components: {
         movieCard,
-        slider
+        swiper
     },
     data() {
 		return {

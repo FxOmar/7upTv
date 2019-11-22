@@ -23,14 +23,9 @@ export default {
         href:
           "https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
       },
-      { 
-        rel:"stylesheet", 
-        href:"https://unpkg.com/swiper/css/swiper.min.css" 
-      }
     ],
     script: [
       { src: "https://kit.fontawesome.com/89d14b18c9.js" },
-      { src: "https://unpkg.com/swiper/js/swiper.min.js" }
     ]
   },
   /*
@@ -40,7 +35,9 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    'swiper/dist/css/swiper.css',
+  ],
   /*
    ** Plugins to load before mounting the App
    */
@@ -51,7 +48,8 @@ export default {
     { src: "~/plugins/ssr/util" },
     { src: "~/plugins/ssr/ui" },
     { src: "~/plugins/axios" },
-    { src: "~/plugins/directives.js" }
+    { src: "~/plugins/directives.js" },
+    { src: '~/plugins/swiper.js', ssr: false },
   ],
   /*
    ** Nuxt.js dev-modules

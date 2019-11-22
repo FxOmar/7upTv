@@ -5,10 +5,10 @@
     </div>
     <div class="container mx-auto px-12 py-5">
       <div class="mt-10 border-b">
-        <popularMSlider />
+        <popularmoviesSlider />
       </div>
       <div class="mt-10">
-        <!-- <slider title="Now Playing Movies" /> -->
+       <NowPlayingMovies />
       </div>
     </div>
   </div>
@@ -16,13 +16,14 @@
 
 <script>
 import jumbotron from '~/components/common/jumbotron'
-import popularMSlider from '~/components/popularMSlider'
-
+import popularmoviesSlider from '~/components/popular-movies-Slider'
+import NowPlayingMovies from '~/components/now-playing-movies'
 
 export default {
   components: {
     jumbotron,
-    popularMSlider
+    popularmoviesSlider,
+    NowPlayingMovies
   },
   data () {
     return { project: 'default' }
