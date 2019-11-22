@@ -50,7 +50,8 @@ export default {
     { src: "~/plugins/no-ssr/vue-textarea-autosize", ssr: false },
     { src: "~/plugins/ssr/util" },
     { src: "~/plugins/ssr/ui" },
-    { src: "~/plugins/axios" }
+    { src: "~/plugins/axios" },
+    { src: "~/plugins/directives.js" }
   ],
   /*
    ** Nuxt.js dev-modules

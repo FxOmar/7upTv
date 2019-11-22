@@ -13,15 +13,38 @@
           </div>
           <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
             <div class="lg:flex-grow">
-              <nuxt-link to="/movies" class="block lg:inline-block lg:mt-0 hover:text-blue-400 mr-4">
-                Movies
-              </nuxt-link>
-              <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-blue-400 mr-4">
-                Examples
-              </a>
-              <a href="#responsive-header" class="block lg:inline-block lg:mt-0 hover:text-blue-400">
-                Blog
-              </a>
+              <dropdown drop_name="Movies">
+                  <ul class="popup-box" slot-scope="{ onClose }" @click="onClose">
+                    <nuxt-link to="/movies/movie-popular">
+                      <li>Popular</li>
+                    </nuxt-link>
+                    <nuxt-link to="/movies/movie-now-playing">
+                      <li>Now Playing</li>
+                    </nuxt-link>
+                    <nuxt-link to="/movies/top_rated">
+                      <li>Top Rated</li>
+                    </nuxt-link>
+                    <nuxt-link to="/movies/upcoming">
+                      <li>Upcoming</li>
+                    </nuxt-link>
+                  </ul>
+              </dropdown>
+              <dropdown drop_name="TV Shows">
+                  <ul class="popup-box" slot-scope="{ onClose }" @click="onClose">
+                    <nuxt-link to="/movies">
+                      <li>Popular</li>
+                    </nuxt-link>
+                    <nuxt-link to="#">
+                      <li>Top Rated</li>
+                    </nuxt-link>
+                    <nuxt-link to="#">
+                      <li>Currently Airing</li>
+                    </nuxt-link>
+                    <nuxt-link to="#">
+                      <li>Airing Today</li>
+                    </nuxt-link>
+                  </ul>
+              </dropdown>
             </div>
             <div class="flex">
               <div class="flex items-center">
@@ -134,18 +157,22 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import dropdown from '~/components/ui/dropdown'
 
 export default {
+  components:{
+    dropdown
+  },
   computed: {
     ...mapGetters(['isAuthenticated', 'loggedInUser'])
   },
   methods: {
     async logout() {
       await this.$auth.logout();
-    }
+    },
   }
 }
 </script>
 
-<style>
+<style scoped>
 </style>
