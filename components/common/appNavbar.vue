@@ -93,11 +93,11 @@
                         class="popup-menu"
                         @click="hide"
                       >
-                        <nuxt-link to="/create/movie">
+                        <nuxt-link to="/new/movie">
                           <li>{{ $t('Movie') }}</li>
                         </nuxt-link>
                         <li class="divider"></li>
-                        <nuxt-link to="/create/series">
+                        <nuxt-link to="/new/tv-show">
                           <li>{{ $t('Series') }}</li>
                         </nuxt-link>
                       </ul>
