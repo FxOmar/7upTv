@@ -1,0 +1,12 @@
+{
+	"arrowParens": "avoid",
+	"semi": true,
+	"useTabs": false,
+	"vueIndentScriptAndStyle": true,
+	"endOfLine": "auto",
+	"jsxBracketSameLine": true,
+	"bracketSpacing": true,
+	"trailingComma": "none",
+	"parser": "vue",
+	"plugins": ["@nuxt", "postcss"]
+}
