@@ -34,7 +34,7 @@
                                 </nuxt-link>
                             </div>
                             <div class="mb-3">
-                                <app-button :loading="submitLoading" class="w-full font-bold" color="blue">
+                                <app-button class="w-full font-bold" color="blue">
                                     {{ $t('login') }}
                                 </app-button>
                             </div>

@@ -56,10 +56,8 @@
 </template>
 
 <script>
-import movieCard from '~/components/common/movieCard'
 export default {
   components: {
-    movieCard
   }
 }
 </script>

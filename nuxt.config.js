@@ -64,7 +64,6 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     "@nuxtjs/axios",
-    '@nuxtjs/proxy',
     '@nuxtjs/auth',
     "nuxt-i18n",
     "cookie-universal-nuxt",
@@ -76,12 +75,7 @@ export default {
    */
   axios: {
     baseURL: process.env.API_URL
-    // proxy: true
   },
-  // proxy: {
-  //   '/api/': { target: process.env.API_URL , pathRewrite: {'^/api/': ''} },
-  //   '/api2/': { target:process.env.IMDB_API_URL, pathRewrite: {'^/api/': ''} }
-  // },
 
   auth: {
   	strategies: {
@@ -99,7 +93,7 @@ export default {
   				user: {
   					url: '/me',
   					method: 'GET',
-  					propertyName: 'result'
+  					propertyName: 'user'
   				}
   			}
   		}
