@@ -1,8 +1,7 @@
 {
   "name": "7uptv",
-  "version": "1.0.0",
-  "description": "My fantastic Nuxt.js project",
-  "author": "",
+  "version": "0.9.1",
+  "description": "A website for 7UP Moviess",
   "private": true,
   "scripts": {
     "dev": "nuxt",
