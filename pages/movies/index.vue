@@ -2,7 +2,7 @@
   <div class="container mx-auto py-5 px-12">
     <div class="flex">
       <div class="flex flex-wrap mx-2">
-        <movieCard v-for="(movie, index) in movies" :key="index" class="w-48 pl-1" :title="movie.title" :img="movie.poster_path" :vote_average="movie.vote_average" />
+        <movieCard v-for="(movie, index) in movies" :key="index" class="w-48 pl-1" :title="movie.title" :url="movie.id" :img="movie.poster_path" :vote_average="movie.vote_average" />
       </div>
     </div>
     <infinite-loading spinner="spiral" @infinite="infiniteScroll"></infinite-loading>
@@ -11,10 +11,8 @@
 
 <script>
 import movieCard from '~/components/common/movieCard'
-import axios from "axios";
 
 export default {
-	scrollToTop: true,
 	components: {
 		movieCard,
 	},
@@ -27,25 +25,26 @@ export default {
 
 	computed: {
 		url() {
-			return "https://api.themoviedb.org/3/movie/popular?api_key=282861697b1461993e375f17e2212e83&language=en-US&page=" + this.page;
+			return "/movies?page=" + this.page;
 		}
 	},
 
-	created() {
+	mounted() {
 		this.fetchData();
 	},
 	methods: {
 		async fetchData() {
-			const response = await axios.get(this.url);
-			this.movies = response.data.results;
+			const response = await this.$axios.$get(this.url);
+			this.movies = response.movies.data;
+			console.log(this.movies)
 		},
 		infiniteScroll($state) {
 			setTimeout(() => {
 				this.page++
-				axios.get(this.url)
+				this.$axios.$get(this.url)
 					.then((response) => {
-						if (response.data.results.length > 1) {
-							response.data.results.forEach((item) => this.movies.push(item))
+						if (response.movies.data.length > 1) {
+							response.movies.data.forEach((item) => this.movies.push(item))
 							$state.loaded()
 						} else {
 							$state.complete()
