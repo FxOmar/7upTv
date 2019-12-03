@@ -30,7 +30,7 @@
 								<h3>{{ movie.title }}</h3>
 								<div class="mobile-btn">
 									<a class="mod-btn" data-target="#pop-trailer" data-toggle="modal">Trailer</a>
-									<a class="mod-btn mod-btn-watch" href="watching.html"
+                  <a class="mod-btn mod-btn-watch" :href="`/movie/${movie.id}`"
 										title="Watch movie"><i class="fa fa-play mr5"></i> Watch movie</a>
 								</div>
 							</div>
@@ -62,7 +62,7 @@
 						<div class="btn-watch-area w-1/2">
 							<div class="bwa-content">
 								<div class="loader"></div>
-								<a href="/watching" class="bwac-btn"
+								<a :href="`/movie/${movie.id}`" class="bwac-btn"
 									title="Click to play">
 									<i class="fa fa-play"></i>
 								</a>
